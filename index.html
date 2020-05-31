@@ -210,17 +210,16 @@ a {
   -o-transition: all .5s cubic-bezier(.25, 1, .5, 1.25);
 }
 
+
+@media screen and (min-width:300px) {
 .page#p1 .icon {
+  transform: translateX(0%) !important;
   height: 90%;
   width: 40%;
   top : 20%;
   left: 15%;
 }
-
-.page#p1 .icon {
-  transform: translateX(0%) !important;
 }
-
 #t2:target .page#p2 .icon,
 #t3:target .page#p3 .icon,
 #t4:target .page#p4 .icon,
