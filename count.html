@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=MuseoModerno:wght@531&display=swap" rel="stylesheet">
+        <style>
+        body {background-color:black; color: white; }
+        
+        #total {
+            float: left;
+            font-family : MuseoModerno; }
+        #alltext {
+            float: left; width :30%; 
+  
+          margin-right: 5%;
+            margin-left : 25%; 
+            margin-top: 3%; 
+        }
+        #countword {
+            float: left;             
+            margin-top : 3% ;
+            
+            }
+        #h1{
+            margin-left: 25%;
+            font-weight:100;
+            font-family : 'Black Han Sans';}
+        #h2 {
+            font-weight: 100;
+            font-family : 'Black Han Sans';
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 id = 'h1'>당신이 입력한 텍스트는  {{total}}단어로 구성되어 있습니다.</h1>
+    
+    <a href="{% url 'home' %}">다시하기</a>
+    <div id = 'alltext'>
+        <br>
+        <br>
+    <h1 id = 'h2'>입력한 텍스트: </h1>
+    {{alltext}}
+    </div>
+    
+    <div id = 'countword'>
+        <br>
+        <br>
+    <h1 id = 'h2'>단어 카운트: </h1>
+    
+
+    {% for word, frequency in dictionary %}
+    {{word}} : {{frequency}}
+
+    <br>
+    {% endfor %}
+</div>
+</body>
+</html>
